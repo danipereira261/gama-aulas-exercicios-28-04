@@ -1,18 +1,37 @@
 package exercicio1;
 
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 public class Pessoa {
 
     private String nome;
     private LocalDate dataNascimento;
+    private Integer anos;
     private Float altura;
 
-    public Integer getIdadePessoa( String dataNascimento){
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy");
-        LocalDate dataNascimentoEmDateTime = LocalDate.parse(dataNascimento,dtf);
-        return LocalDate.now().compareTo(dataNascimentoEmDateTime);
+    private Integer getIdadePessoa(LocalDate dataNascimento) {
+        return LocalDate.now().compareTo(dataNascimento);
+    }
+
+    @Override
+    public String toString() {
+        return "{nome = " + nome + '\'' +
+                ", '" + anos + " anos'," +
+                "'altura = " + altura + "'}";
+    }
+
+    public void print(Object o) {
+        System.out.println(o.toString());
+    }
+
+    public Pessoa() {
+    }
+
+    public Pessoa(String nome, LocalDate dataNascimento, Integer anos, Float altura) {
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+        this.anos = anos;
+        this.altura = altura;
     }
 
     public String getNome() {
@@ -29,6 +48,15 @@ public class Pessoa {
 
     public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
+    }
+
+    public Integer getAnos() {
+        return anos;
+    }
+
+    public void setAnos() {
+
+        this.anos = getIdadePessoa(this.getDataNascimento());
     }
 
     public Float getAltura() {
