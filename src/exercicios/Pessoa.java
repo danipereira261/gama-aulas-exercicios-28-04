@@ -1,4 +1,4 @@
-package exercicio1;
+package exercicios;
 
 import java.time.LocalDate;
 
@@ -9,7 +9,9 @@ public class Pessoa {
     private Integer anos;
     private Float altura;
 
+
     private Integer getIdadePessoa(LocalDate dataNascimento) {
+
         return LocalDate.now().compareTo(dataNascimento);
     }
 
@@ -60,10 +62,26 @@ public class Pessoa {
     }
 
     public Float getAltura() {
+
         return altura;
     }
 
     public void setAltura(Float altura) {
+
         this.altura = altura;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
