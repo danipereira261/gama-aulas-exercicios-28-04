@@ -70,18 +70,4 @@ public class Pessoa {
 
         this.altura = altura;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }

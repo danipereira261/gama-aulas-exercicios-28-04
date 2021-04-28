@@ -3,7 +3,7 @@ package exercicios;
 import java.time.LocalDate;
 import java.time.Month;
 
-public class Gerenciador {
+public class MainPessoaEAgenda {
 
     public static void main(String[] args) {
 
